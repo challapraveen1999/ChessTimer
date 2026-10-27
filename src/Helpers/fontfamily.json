@@ -1,0 +1,23 @@
+{
+  "PoppinsBold": "Poppins-Bold",
+  "PoppinsExtraBold": "Poppins-ExtraBold",
+  "PoppinsExtraLight": "Poppins-ExtraLight",
+  "PoppinsLight": "Poppins-Light",
+  "PoppinsMedium": "Poppins-Medium",
+  "PoppinsRegular": "Poppins-Regular",
+  "PoppinsSemiBold": "Poppins-SemiBold",
+  "PoppinsThin": "Poppins-Thin",
+  "PoppinsBlack": "Poppins-Black",
+  "fontFamily": "Poppins",
+  "fonts": {
+    "thin": "Poppins-Thin",
+    "extraLight": "Poppins-ExtraLight",
+    "light": "Poppins-Light",
+    "regular": "Poppins-Regular",
+    "medium": "Poppins-Medium",
+    "semiBold": "Poppins-SemiBold",
+    "bold": "Poppins-Bold",
+    "extraBold": "Poppins-ExtraBold",
+    "black": "Poppins-Black"
+  }
+}

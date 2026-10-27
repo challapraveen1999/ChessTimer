@@ -1,0 +1,76 @@
+{
+  "TheamColor": "#D4AF37",
+  "GoldPrimary": "#D4AF37",
+  "GoldLight": "#F3E5AB",
+  "GoldChampagne": "#F5E2B3",
+  "GoldDark": "#997519",
+  "White": "#FFFFFF",
+  "Black": "#000000",
+  "BgColor": "#0A0A0C",
+  "BgDark": "#0A0A0C",
+  "BgSecondary": "#121216",
+  "Surface": "#1A1A22",
+  "SurfaceElevated": "#22212C",
+  "TextPrimary": "#FFFFFF",
+  "TextSecondary": "#B0B0BE",
+  "TextMuted": "#6E6E7E",
+  "TextGold": "#ECC86C",
+  "BorderSubtle": "#252430",
+  "BorderGold": "#D4AF37",
+  "Danger": "#E63946",
+  "Warning": "#F4A261",
+  "Success": "#2A9D8F",
+  "theme": "Haute Horlogerie Black & Gold",
+  "background": {
+    "primary": "#0A0A0C",
+    "secondary": "#121216",
+    "surface": "#1A1A22",
+    "surfaceElevated": "#22212C",
+    "overlay": "rgba(10, 10, 12, 0.85)"
+  },
+  "gold": {
+    "primary": "#D4AF37",
+    "light": "#F3E5AB",
+    "champagne": "#F5E2B3",
+    "dark": "#997519",
+    "amber": "#C59B27",
+    "bronze": "#7E5E15",
+    "gradientStart": "#ECC86C",
+    "gradientEnd": "#98681A",
+    "glow": "rgba(212, 175, 55, 0.35)",
+    "glowIntense": "rgba(212, 175, 55, 0.65)"
+  },
+  "clockCards": {
+    "playerInactiveBg": "#141418",
+    "playerInactiveBorder": "#26262F",
+    "playerInactiveText": "#8E8E98",
+    "playerActiveBg": "#1C1B17",
+    "playerActiveBorder": "#D4AF37",
+    "playerActiveGlow": "rgba(212, 175, 55, 0.4)",
+    "playerActiveText": "#FFF6D6",
+    "lowTimeBg": "#261113",
+    "lowTimeBorder": "#E63946",
+    "lowTimeText": "#FF4D5E",
+    "lowTimeGlow": "rgba(230, 57, 70, 0.4)"
+  },
+  "text": {
+    "primary": "#FFFFFF",
+    "secondary": "#B0B0BE",
+    "muted": "#6E6E7E",
+    "gold": "#ECC86C",
+    "goldBright": "#FFF1C5",
+    "inverted": "#0A0A0C"
+  },
+  "status": {
+    "danger": "#E63946",
+    "warning": "#F4A261",
+    "success": "#2A9D8F",
+    "info": "#4A90E2"
+  },
+  "borders": {
+    "subtle": "#252430",
+    "gold": "#D4AF37",
+    "active": "#ECC86C",
+    "glass": "rgba(255, 255, 255, 0.08)"
+  }
+}
