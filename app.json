@@ -1,4 +1,8 @@
 {
   "name": "ChessTimmer",
-  "displayName": "ChessTimmer"
+  "displayName": "ChessTimmer",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-2197954395692761~8621941951",
+    "ios_app_id": "ca-app-pub-3940256099942544~1458002511"
+  }
 }

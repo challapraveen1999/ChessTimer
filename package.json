@@ -1,6 +1,6 @@
 {
   "name": "ChessTimmer",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -17,6 +17,7 @@
     "react": "19.3.0",
     "react-native": "0.88.0",
     "react-native-gesture-handler": "^3.4.0",
+    "react-native-google-mobile-ads": "^17.4.0",
     "react-native-safe-area-context": "^5.5.2",
     "react-native-screens": "^4.30.0"
   },

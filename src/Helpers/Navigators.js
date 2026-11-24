@@ -13,6 +13,8 @@ import Profile from '../Screens/Profile';
 import EditProfile from '../Screens/EditProfile';
 import TimeControls from '../Screens/TimeControls';
 import SoundSettings from '../Screens/SoundSettings';
+import PrivacyPolicy from '../Screens/PrivacyPolicy';
+import TermsAndConditions from '../Screens/TermsAndConditions';
 import colorCodes from '../Helpers/colorcodes.json';
 
 const Stack = createStackNavigator();
@@ -50,6 +52,8 @@ const StackNavigator = () => {
         <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="TimeControls" component={TimeControls} />
         <Stack.Screen name="SoundSettings" component={SoundSettings} />
+        <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+        <Stack.Screen name="TermsAndConditions" component={TermsAndConditions} />
       </Stack.Navigator>
     </SafeAreaView>
   );

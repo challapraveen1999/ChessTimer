@@ -281,6 +281,48 @@ const SoundSettings = ({ navigation }) => {
             ))}
           </View>
         </View>
+        {/* About & Legal Section */}
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>ABOUT & LEGAL</Text>
+        </View>
+
+        <View style={[styles.card, Elevations.low]}>
+          <TouchableOpacity
+            style={styles.legalRow}
+            onPress={() => {
+              AudioService.playMoveSound();
+              navigation.navigate('PrivacyPolicy');
+            }}
+          >
+            <View style={styles.legalRowLeft}>
+              <Text style={styles.legalIcon}>🔒</Text>
+              <View>
+                <Text style={styles.rowTitle}>Privacy Policy</Text>
+                <Text style={styles.rowSubtitle}>How your data & ad privacy are handled</Text>
+              </View>
+            </View>
+            <Text style={styles.legalArrow}>›</Text>
+          </TouchableOpacity>
+
+          <View style={styles.divider} />
+
+          <TouchableOpacity
+            style={styles.legalRow}
+            onPress={() => {
+              AudioService.playMoveSound();
+              navigation.navigate('TermsAndConditions');
+            }}
+          >
+            <View style={styles.legalRowLeft}>
+              <Text style={styles.legalIcon}>⚖️</Text>
+              <View>
+                <Text style={styles.rowTitle}>Terms and Conditions</Text>
+                <Text style={styles.rowSubtitle}>Terms of use & legal disclaimers</Text>
+              </View>
+            </View>
+            <Text style={styles.legalArrow}>›</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
 
       {/* BOTTOM NAVIGATION BAR */}
@@ -472,6 +514,25 @@ const styles = StyleSheet.create({
   segmentTextActive: {
     color: Colors.gold.light,
     fontWeight: '700',
+  },
+  legalRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 4,
+  },
+  legalRowLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  legalIcon: {
+    fontSize: 18,
+  },
+  legalArrow: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: Colors.gold.primary,
   },
 });
 

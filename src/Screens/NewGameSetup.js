@@ -14,6 +14,7 @@ import { Colors, Typography, Shadows, Elevations } from '../Helpers/theme';
 import AudioService from '../Helpers/audioService';
 import { getUserProfile, getUserSettings, saveUserSettings } from '../Helpers/storageHelper';
 import BottomNavBar from '../Components/BottomNavBar';
+import BannerAdView from '../Components/BannerAdView';
 
 const TIME_PRESETS = [
   { id: '1m', name: '1 min', seconds: 60, category: 'bullet' },
@@ -27,8 +28,8 @@ const TIME_PRESETS = [
 const NewGameSetup = ({ navigation }) => {
   console.log('[NewGameSetup] Rendering New Game Setup screen (clean time controls without increment)');
 
-  const [whitePlayer, setWhitePlayer] = useState('');
-  const [blackPlayer, setBlackPlayer] = useState('');
+  const [whitePlayer, setWhitePlayer] = useState('Player 1');
+  const [blackPlayer, setBlackPlayer] = useState('Player 2');
   const [whiteError, setWhiteError] = useState('');
   const [blackError, setBlackError] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('blitz'); // 'bullet' | 'blitz' | 'rapid' | 'custom'
@@ -441,7 +442,32 @@ const NewGameSetup = ({ navigation }) => {
         >
           <Text style={styles.startGameBtnText}>START GAME</Text>
         </TouchableOpacity>
+
+        {/* Legal Footer Links */}
+        <View style={styles.legalFooter}>
+          <Text style={styles.legalFooterText}>By continuing, you agree to our </Text>
+          <TouchableOpacity
+            onPress={() => {
+              AudioService.playMoveSound();
+              navigation.navigate('TermsAndConditions');
+            }}
+          >
+            <Text style={styles.legalFooterLink}>Terms</Text>
+          </TouchableOpacity>
+          <Text style={styles.legalFooterText}> & </Text>
+          <TouchableOpacity
+            onPress={() => {
+              AudioService.playMoveSound();
+              navigation.navigate('PrivacyPolicy');
+            }}
+          >
+            <Text style={styles.legalFooterLink}>Privacy Policy</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
+
+      {/* Google Mobile Ads Banner */}
+      <BannerAdView style={{ marginVertical: 2 }} />
 
       {/* BOTTOM NAVIGATION BAR: Home | History | Profile | Settings */}
       <BottomNavBar activeTab="home" navigation={navigation} />
@@ -720,6 +746,26 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
     color: Colors.background.primary,
     fontFamily: Typography.titleMedium.fontFamily,
+  },
+  legalFooter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 6,
+    marginBottom: 16,
+    flexWrap: 'wrap',
+  },
+  legalFooterText: {
+    fontSize: 11,
+    color: Colors.text.muted,
+    fontFamily: Typography.caption.fontFamily,
+  },
+  legalFooterLink: {
+    fontSize: 11,
+    color: Colors.gold.light,
+    fontWeight: '700',
+    textDecorationLine: 'underline',
+    fontFamily: Typography.caption.fontFamily,
   },
 });
 

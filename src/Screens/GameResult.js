@@ -12,6 +12,7 @@ import { Colors, Typography, Shadows, Elevations } from '../Helpers/theme';
 import AudioService from '../Helpers/audioService';
 import { getUserSettings, saveUserSettings } from '../Helpers/storageHelper';
 import BottomNavBar from '../Components/BottomNavBar';
+import BannerAdView from '../Components/BannerAdView';
 
 const GameResult = ({ navigation, route }) => {
   const matchData = route?.params || {};
@@ -291,6 +292,9 @@ const GameResult = ({ navigation, route }) => {
           </TouchableOpacity>
         </View>
       </ScrollView>
+
+      {/* Google Mobile Ads Banner with X Close Mark */}
+      <BannerAdView style={{ marginVertical: 4 }} allowClose={true} />
 
       {/* PERSISTENT BOTTOM NAVIGATION BAR (Home, History, Profile, Settings) */}
       <BottomNavBar activeTab="home" navigation={navigation} />

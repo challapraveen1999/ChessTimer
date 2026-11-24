@@ -1,13 +1,30 @@
 import React, { useEffect } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, LogBox } from 'react-native';
+
+LogBox.ignoreAllLogs();
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import mobileAds from 'react-native-google-mobile-ads';
 import StackNavigator from './Helpers/Navigators';
 import { navigationRef } from './Helpers/navigationHelper';
+import AdService from './Helpers/adService';
 
 const App = () => {
   useEffect(() => {
     console.log('[RoyalChessClock] App mounted successfully. Ready for match play.');
+    // Initialize Google Mobile Ads SDK
+    try {
+      mobileAds()
+        .initialize()
+        .then((adapterStatuses) => {
+          console.log('AdMob initialized:', adapterStatuses);
+        })
+        .catch((error) => {
+          console.log('AdMob initialization error:', error);
+        });
+    } catch (error) {
+      console.log('AdMob native module check:', error?.message);
+    }
   }, []);
 
   return (

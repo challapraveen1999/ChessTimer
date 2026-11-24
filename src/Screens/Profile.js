@@ -271,6 +271,40 @@ const Profile = ({ navigation }) => {
         >
           <Text style={styles.editProfileBtnText}>EDIT PROFILE & AVATAR</Text>
         </TouchableOpacity>
+
+        {/* LEGAL & POLICIES CARD */}
+        <View style={[styles.statsCard, Elevations.low]}>
+          <Text style={styles.statsCardTitle}>LEGAL & POLICIES</Text>
+          <TouchableOpacity
+            style={styles.legalRow}
+            onPress={() => {
+              AudioService.playMoveSound();
+              navigation.navigate('PrivacyPolicy');
+            }}
+          >
+            <View style={styles.legalRowLeft}>
+              <Text style={styles.legalIcon}>🔒</Text>
+              <Text style={styles.legalRowText}>Privacy Policy</Text>
+            </View>
+            <Text style={styles.legalArrow}>›</Text>
+          </TouchableOpacity>
+
+          <View style={styles.divider} />
+
+          <TouchableOpacity
+            style={styles.legalRow}
+            onPress={() => {
+              AudioService.playMoveSound();
+              navigation.navigate('TermsAndConditions');
+            }}
+          >
+            <View style={styles.legalRowLeft}>
+              <Text style={styles.legalIcon}>⚖️</Text>
+              <Text style={styles.legalRowText}>Terms and Conditions</Text>
+            </View>
+            <Text style={styles.legalArrow}>›</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
 
       {/* BOTTOM NAVIGATION BAR */}
@@ -538,6 +572,31 @@ const styles = StyleSheet.create({
     letterSpacing: 1.5,
     color: Colors.background.primary,
     fontFamily: Typography.titleMedium.fontFamily,
+  },
+  legalRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 6,
+  },
+  legalRowLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  legalIcon: {
+    fontSize: 16,
+  },
+  legalRowText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: Colors.text.primary,
+    fontFamily: Typography.body.fontFamily,
+  },
+  legalArrow: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: Colors.gold.primary,
   },
 });
 
